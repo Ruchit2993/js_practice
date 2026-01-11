@@ -95,3 +95,52 @@
 //   grouped[key].push(student.name);
 // }
 // console.log(grouped);
+
+// const grouped = Object.groupBy(students, ({ sclass }) => sclass);
+// console.log(grouped)
+
+
+// 5>  Inverting an Object
+
+// function invertObject(obj) {
+//   const inverted = {};
+//   for (const key in obj) {
+//     const value = obj[key];
+//     if (!inverted[value]) {
+//       inverted[value] = key;
+//     } else {
+//       if (Array.isArray(inverted[value])) {
+//         inverted[value].push(key);
+//       } else {
+//         inverted[value] = [inverted[value], key];
+//       }
+//     }
+//   }
+//   return inverted;
+// }
+// const input = { a: 1, b: 2, c: 1 };
+// console.log(invertObject(input));
+
+// function invertObject(obj) {
+//     const inverted = {};
+//     for (const key in obj) {
+//         if (Object.hasOwn(obj, key)) {
+//             const value = obj[key];
+//             if (!inverted[value]) {
+//                 inverted[value] = key;
+//             } else {
+//                 if (Array.isArray(inverted[value])) {
+//                     inverted[value].push(key);
+//                 } else {
+//                     inverted[value] = [inverted[value], key];
+//                 }
+//             }
+//         }
+//     }
+//     return inverted;
+// }
+// const input = { a: 1, b: 2, c: 1 };
+// console.log(invertObject(input));
+
+// 6> 
+
