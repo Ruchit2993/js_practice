@@ -1,4 +1,4 @@
-// How to get a key in a JavaScript object by its value
+// 1>How to get a key in a JavaScript object by its value
 // function getKeyByValue(object, value) {
 //     let res = [];
 //     const keys = Object.keys(object);
@@ -33,7 +33,7 @@
 // console.log(ans);
 
 
-// ----------------------------------- Convert an Array to an Object
+// 2> Convert an Array to an Object
 
 // let a = [1, 2, 3, 4];
 // let a = ["q", "w", "e", "e"];
@@ -54,4 +54,44 @@
 
 
 
-//  ----------------------------------
+//  3> Creating an Object from Two Arrays
+
+// let keys = ['name', 'age'];
+// let values = ['Alice', 25];
+
+// let result = keys.reduce((obj, key, index) => {
+//   obj[key] = values[index];
+//   return obj;
+// }, {});
+// console.log(result)
+
+// let result = {};
+// for (let i = 0; i < keys.length; i++) {
+//   result[keys[i]] = values[i];
+// }
+// console.log(result);
+
+// 4>  Grouping Objects by Property
+// const students = [
+//   { name: "David", sclass: "VI" },
+//   { name: "Jane", sclass: "VII" },
+//   { name: "Rayy", sclass: "VI" }
+// ];
+
+// const grouped = students.reduce((acc, student) => {
+//   const key = student.sclass;
+//   if (!acc[key]) acc[key] = [];
+//   acc[key].push(student.name);
+//   return acc;
+// }, {});
+// console.log(grouped);
+
+// const grouped = {};
+// for (const student of students) {
+//   const key = student.sclass;
+//   if (!grouped[key]) {
+//     grouped[key] = [];
+//   }
+//   grouped[key].push(student.name);
+// }
+// console.log(grouped);
