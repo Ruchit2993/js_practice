@@ -21,8 +21,23 @@
 // console.log(arr)
 
 // how to set ele in Array
-// using ...
-let s = new Set(['GFG', 'JS']);
-let a = [...s];
-console.log(a);
-console.log(s)
+// 1> using ...
+// let s = new Set(['GFG', 'JS']);
+// let a = [...s];
+// console.log(a);
+// console.log(s);
+
+// 2> using Array.from()
+// const s = new Set([1, 1, 2, 3, 4, 4, 5, 6, 5]);
+// let a = Array.from(s);
+// console.log(a);
+// console.log(s)
+
+// 3> forEach loop
+// let s = new Set(['GFG', 'JS']);
+// let a = [];
+// s.forEach((x) => {
+//     a.push(x)
+// });
+// console.log(a);
+
