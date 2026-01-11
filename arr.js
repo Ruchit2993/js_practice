@@ -41,3 +41,29 @@
 // });
 // console.log(a);
 
+//  Inserting & Deleting an ele in array
+let a = [10, 20, 30, 40];
+let y = a.push(50)
+let x = a.unshift(50);
+let z = a.splice(pos = 2,del = 0,ele = 50)
+// a.splice(pos = 2,del = 0,ele1 = 60, ele2 = 70)
+console.log(a);
+console.log("Unshift",x)
+console.log("Push",y)
+console.log("Splice",z)
+// let w = a.shift()
+// let v = a.pop()
+// let u = a.splice(idx = 0, del =1 )
+// console.log(a)
+// console.log(u)
+// console.log(v)
+// console.log(w)
+// Delete First Occurrence from a JS Array
+// let idx = a.indexOf(50);
+// let idx = a.lastIndexOf(50);
+// if (idx !== -1) {
+//   a.splice(idx, 1);
+// }
+let res = a.filter(e => e !== 50);
+console.log(a);
+console.log(res)
