@@ -133,7 +133,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(res)
 
-// 8> printing only names if users
+// 8> printing only names
 // let users = [
 //   { name: "Alice", age: 25 },
 //   { name: "Bob", age: 34 },
@@ -161,7 +161,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // 10> Find the longest string
 
 // let longest = "";
-// for (const str of a) {
+// for (let str of a) {
 //     if (str.length > longest.length) {
 //         longest = str;
 //     }
@@ -170,4 +170,49 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 
 // let longest = a.reduce((x, y) => (x.length >= y.length ? x : y), "");
 // console.log(longest); 
+
+// 11> array contains a specific element
+
+// let fruits = ["apple", "banana", "orange"];
+
+// let item = fruits.includes("banana"); 
+// console.log(item);
+
+// let item = "banana";
+// for (let i = 0; i < fruits.length; i++) {
+//   if (fruits[i] === item) {
+//     console.log("Item at index",i);
+//     break;
+//   }
+// }
+
+//  12> capitalize the first letter of every string in an array
+
+// let fruits = ["apple", "banana", "orange"];
+
+// let item = fruits.map(word => 
+//   word.charAt(0).toUpperCase() + word.slice(1)
+// );
+// console.log(item);
+
+// for (let i = 0; i < fruits.length; i++) {
+//   fruits[i] = fruits[i].charAt(0).toUpperCase() + fruits[i].slice(1);
+// }
+// console.log(fruits);
+
+// 13> capitalize the last letter of every string in an array
+
+// const fruits = ["apple", "banana", "orange"];
+
+// const item = fruits.map(word => 
+//   word.slice(0, -1) + word.charAt(word.length - 1).toUpperCase()
+// );
+// console.log(item);
+
+// for (let i = 0; i < fruits.length; i++) {
+//   fruits[i] = fruits[i].slice(0, -1) + fruits[i].slice(-1).toUpperCase();
+// }
+// console.log(fruits); // ["applE", "bananA", "orangE"]
+
+
 
