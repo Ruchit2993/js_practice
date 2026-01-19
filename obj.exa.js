@@ -197,3 +197,48 @@
 // }
 // console.log(uniqueRoles);
 // console.log(duplicate)
+
+// 8> printing longest name from object
+// let users = {
+//     user1: "Jake",
+//     user2: "Luther",
+//     user3: "Carter",
+//     user4: "Parker"
+// };
+
+// let longestName = "";
+// for (let key in users) {
+//     let name = users[key];
+//     if (name.length > longestName.length) {
+//         longestName = name;
+//     }
+// }
+
+// 9> optimiz that if two names have same length then all names with same length will be printed
+
+// let longestName = "";
+// let maxLength = 0;
+// for (let key in users) {
+//     // console.log(users[key])
+//     if (users[key].length > maxLength) {
+//         maxLength = users[key].length;
+//     }
+// }
+// for (let key in users) {
+//     if (users[key].length === maxLength) {
+//         console.log(users[key]);
+//     }
+// }
+// console.log(longestName);
+
+// 10>  Count Total Letters in All Values
+// let data = { a: "apple", b: "pie" };
+// let totalChars = 0;
+
+// for (let key in data) {
+//     totalChars += data[key].length;
+// }
+
+// console.log("Total character count:", totalChars);
+
+//  11> 

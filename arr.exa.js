@@ -246,5 +246,30 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(fruits); // ["applE", "bananA", "orangE"]
 
+// 17> resvesre an array
 
+// let reversed = a.slice().reverse();
+// console.log(reversed)
+
+// let reversed = [];
+// for (let i = a.length - 1; i >= 0; i--) {
+//   reversed.push(a[i]);
+// }
+// console.log(reversed);
+
+// reverseing array values like dog to god
+
+// let reversed = a.map(word => word.split('').reverse().join(''));
+// console.log(reversed)
+
+let reversed = [];
+for (let i = 0; i < a.length; i++) {
+  let word = a[i];
+  let revWord = '';
+  for (let j = word.length - 1; j >= 0; j--) {
+    revWord += word[j];
+  }
+  reversed.push(revWord);
+}
+console.log(reversed);
 
