@@ -139,8 +139,61 @@
 //     }
 //     return inverted;
 // }
-// const input = { a: 1, b: 2, c: 1 };
+// let input = { a: 1, b: 2, c: 1 };
 // console.log(invertObject(input));
 
-// 6> 
+// 6> finding duplicate values in Object
 
+// let userRoles = { 
+//   id1: "admin",
+//   id2: "editor",
+//   id3: "admin",
+//   id4: "viewer",
+//   id5: "editor"
+// };
+
+// let counts = {};
+// for (let key in userRoles) {
+//     let val = userRoles[key];
+//     counts[val] = (counts[val] || 0) + 1;
+// }
+
+// for (let val in counts) {
+//     if (counts[val] > 1) {
+//         console.log(`"${val}" : ${counts[val]}`);
+//     }
+// }
+
+// let allValues = Object.values(userRoles);
+// let valueCounts = allValues.reduce((acc, val) => {
+//     acc[val] = (acc[val] || 0) + 1;
+//     return acc;
+// }, {});
+// console.log(valueCounts);
+
+// 7> Removing duplicate values from Object
+
+// let userRoles = { 
+//   id1: "admin",
+//   id2: "editor",
+//   id3: "admin",
+//   id4: "viewer",
+//   id5: "editor"
+// };
+
+// let uniqueRoles = {};
+// let visited = {};
+// let duplicate = {};
+// for (let key in userRoles) {
+//     let value = userRoles[key];
+//     if (visited[value]) {
+//         duplicate[key] = value;
+//         visited[value] = true;
+//     }
+//     else {
+//         uniqueRoles[key] = value;
+//         visited[value] = true;
+//     }
+// }
+// console.log(uniqueRoles);
+// console.log(duplicate)

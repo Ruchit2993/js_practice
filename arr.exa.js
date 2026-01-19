@@ -12,7 +12,39 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(b)
 
-// 2> largest number
+// 2> separating duplicates and unique elements
+// let uni = [];
+// let dup = [];
+
+// for (let i = 0; i < a.length; i++) {
+//     let crr = a[i];
+//     if (uni.includes(crr)) {
+//         if (!dup.includes(crr)) {
+//             dup.push(crr);
+//         }
+//     } else {
+//         uni.push(crr);
+//     }
+// }
+// console.log("dup", dup);
+// console.log("uni", uni);
+
+// 3> duplicate along with counts
+
+// let counts = {};
+// for (let i = 0; i < a.length; i++) {
+//     let item = a[i];
+//     // console.log(item);
+//     // console.log(counts[item])
+//     counts[item] = (counts[item] || 0) + 1;
+// }
+// for (let key in counts) {
+//     if (counts[key] > 1) {
+//         console.log(`${key} : ${counts[key]}`);
+//     }
+// }
+
+// 4> largest number
 // let lar = Math.max(...a);
 // console.log(lar)
 
@@ -29,7 +61,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(max)
 
-// 3> Second Largest number
+// 5> Second Largest number
 // let b = []
 // for(let i = 0;  i < a.length; i++){
 //     // console.log(a[i])
@@ -56,7 +88,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(secondLargest)
 
-// 4> Count occurrences of elements
+// 6> Count occurrences of elements
 
 // let count = a.reduce((acc, val) => {
 //     acc[val] = (acc[val] || 0) + 1;
@@ -71,7 +103,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(count);
 
-// 5> to chek arr contains all +ve num
+// 7> to chek arr contains all +ve num
 
 // let res = a.every(num => num > 0);
 // console.log(res)
@@ -88,7 +120,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // // console.log(res)
 // console.log(positive)
 
-// 6> Find the first user older than 30
+// 8> Find the first user older than 30
 // let users = [
 //   { name: "Alice", age: 25 },
 //   { name: "Bob", age: 34 },
@@ -112,10 +144,10 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(aged)
 
-// 7> find all user older than 30
+// 9> find all user older than 30
 
 // let res = users.filter(user => user.age > 30);
-// console.log(res); 
+// console.log(res);
 
 // let res = [];
 // for (let user of users) {
@@ -133,7 +165,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(res)
 
-// 8> printing only names
+// 10> printing only names
 // let users = [
 //   { name: "Alice", age: 25 },
 //   { name: "Bob", age: 34 },
@@ -148,7 +180,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(names)
 
-// 9> Merge two Sorted Arrays
+// 11> Merge two Sorted Arrays
 // let arr1 = [1, 3, 5];
 // let arr2 = [2, 4, 6];
 
@@ -158,7 +190,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // let merged = arr1.concat(arr2).sort((x,y)=> x-y)
 // console.log(merged)
 
-// 10> Find the longest string
+// 12> Find the longest string
 
 // let longest = "";
 // for (let str of a) {
@@ -169,13 +201,13 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // console.log(longest);
 
 // let longest = a.reduce((x, y) => (x.length >= y.length ? x : y), "");
-// console.log(longest); 
+// console.log(longest);
 
-// 11> array contains a specific element
+// 13> array contains a specific element
 
 // let fruits = ["apple", "banana", "orange"];
 
-// let item = fruits.includes("banana"); 
+// let item = fruits.includes("banana");
 // console.log(item);
 
 // let item = "banana";
@@ -186,11 +218,11 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 //   }
 // }
 
-//  12> capitalize the first letter of every string in an array
+//  14> capitalize the first letter of every string in an array
 
 // let fruits = ["apple", "banana", "orange"];
 
-// let item = fruits.map(word => 
+// let item = fruits.map(word =>
 //   word.charAt(0).toUpperCase() + word.slice(1)
 // );
 // console.log(item);
@@ -200,11 +232,11 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(fruits);
 
-// 13> capitalize the last letter of every string in an array
+// 15> capitalize the last letter of every string in an array
 
 // const fruits = ["apple", "banana", "orange"];
 
-// const item = fruits.map(word => 
+// const item = fruits.map(word =>
 //   word.slice(0, -1) + word.charAt(word.length - 1).toUpperCase()
 // );
 // console.log(item);
