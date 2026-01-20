@@ -268,8 +268,8 @@
 // console.log(total);
 
 // 12> Now the Explence total should be stored in new object
-let expenses = { rent: 6000, food: 3000, recharge: 300 };
-let expenseSummary = { totalExpense: 0 };
+// let expenses = { rent: 6000, food: 3000, recharge: 300 };
+// let expenseSummary = { totalExpense: 0 };
 
 // let keys = Object.keys(expenses);
 // for (let i = 0; i < keys.length; i++) {
@@ -282,6 +282,23 @@ let expenseSummary = { totalExpense: 0 };
 // }
 // console.log(expenseSummary);
 
-let vals = Object.values(expenses);
-expenseSummary.totalExpense = vals.reduce((sum, val) => sum + val, 0);
-console.log(expenseSummary);
+// let vals = Object.values(expenses);
+// expenseSummary.totalExpense = vals.reduce((sum, val) => sum + val, 0);
+// console.log(expenseSummary);
+
+// 13> Sorting an Object by its Values
+// let expenses = { rent: 6000, food: 3000, recharge: 300 };
+
+// let sortedByValue = Object.entries(expenses)
+//     // .sort((a, b) => b[1] - a[1]); // Descending
+//     .sort((a, b) => a[1] - b[1]); // Ascending
+// // // console.log(sortedByValue) // will give array of arrays
+// let sortedObject = {};
+// for (let i = 0; i < sortedByValue.length; i++) {
+//     let key = sortedByValue[i][0];
+//     let value = sortedByValue[i][1];
+    
+//     sortedObject[key] = value;
+// }
+// console.log(sortedObject)
+// // console.log(Object.fromEntries(sortedByValue)); 
