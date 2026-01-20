@@ -180,7 +180,164 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(names)
 
-// 11> Merge two Sorted Arrays
+// 11> Sort the array of fruits in alphabetical order (default behavior)
+// let fruits = ["banana", "apple", "orange", "grape", "kiwi"];
+
+// fruits.sort();
+// fruits.sort((a, b) => a.localeCompare(b));
+// console.log(fruits);
+
+// Operation 	        ||  Alphabetical Relation	    ||  Return Value	||  sort() Action
+// a.localeCompare(b)	||  a ("Apple") < b ("Banana")	||  Negative	    ||  a stays first (Ascending)
+// b.localeCompare(a)	||  b ("Banana") > a ("Apple")	||  Positive	    ||  b moves first (Descending)
+
+// fruits.sort((a, b) => {
+//     if (a < b) {
+//         return -1;
+//     } else if (a > b) {
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+// });
+// console.log(fruits);
+
+// using for loop
+// for (let i = 0; i < fruits.length - 1; i++) {
+//     // console.log(fruits[i]);
+//     for (let j = 0; j < fruits.length - 1 - i; j++) {
+//         // console.log("i :", fruits[i]);
+//         // console.log("j :", fruits[j]);
+//         // console.log("j+1 :", fruits[j + 1]);
+//         if (fruits[j] > fruits[j + 1]) {
+//             let temp = fruits[j];
+//             // console.log(temp);
+//             fruits[j] = fruits[j + 1];
+//             fruits[j + 1] = temp;
+//         }
+//     }
+// }
+// console.log(fruits);
+
+// function bubbleSort(arr, n) {
+//     if (n == 1) {
+//         return;
+//     }
+//     for (let i = 0; i < n - 1; i++) {
+//         if (arr[i] > arr[i + 1]) {
+//             let temp = arr[i];
+//             arr[i] = arr[i + 1];
+//             arr[i + 1] = temp;
+//         }
+//     }
+//     bubbleSort(arr, n - 1);
+// }
+// bubbleSort(fruits, fruits.length);
+// console.log(fruits);
+
+// 12> Sort the array of fruits in descending alphabetical order
+// let fruits = ["banana", "apple", "orange", "grape", "kiwi"];
+
+// fruits.sort((a, b) => {
+//     if (a > b) {
+//         return -1;
+//     } else if (a < b) {
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+// });
+// console.log(fruits);
+
+// fruits.sort((a, b) => b.localeCompare(a));
+// fruits.sort((a, b) => a.localeCompare(b));
+// console.log(fruits);
+
+// using for loop
+// for (let i = 0; i < fruits.length - 1; i++) {
+//     // console.log(fruits[i])
+//     for (let j = 0; j < fruits.length - 1 - i; j++) {
+//         // console.log("i :", fruits[i]);
+//         // console.log("j :", fruits[j]);
+//         // console.log("j+1 :", fruits[j + 1]);
+//         if (fruits[j] < fruits[j + 1]) {
+//             let temp = fruits[j];
+//             // console.log(temp);
+//             fruits[j] = fruits[j + 1];
+//             fruits[j + 1] = temp;
+//         }
+//     }
+// }
+// console.log(fruits);
+
+// function bubbleSort(arr, n) {
+//     if (n == 1) {
+//         return;
+//     }
+//     for (let i = 0; i < n - 1; i++) {
+//         if (arr[i] < arr[i + 1]) {
+//             let temp = arr[i];
+//             arr[i] = arr[i + 1];
+//             arr[i + 1] = temp;
+//         }
+//     }
+//     bubbleSort(arr, n - 1);
+// }
+// bubbleSort(fruits, fruits.length);
+// console.log(fruits);
+
+
+// 13> Sort the array of fruits based on the length of the fruit names in ascending order
+// let fruits = ["banana", "apple", "orange", "grape", "kiwi"];
+// let chk = fruits.map(word => word.length);
+// console.log(chk, fruits);
+
+// fruits.sort((a, b) => a.length - b.length);
+// let chk = fruits.map(word => word.length);
+// console.log(fruits , chk);
+
+// using for loop
+// for (let i = 0; i < fruits.length - 1; i++) {
+//     // console.log(fruits[i])
+//     for (let j = 0; j < fruits.length - 1 - i; j++) {
+//         // console.log("i :", fruits[i]);
+//         // console.log("j :", fruits[j]);
+//         // console.log("j+1 :", fruits[j + 1]);
+//         if (fruits[j].length > fruits[j + 1].length) {
+//             let temp = fruits[j];
+//             // console.log(temp);
+//             fruits[j] = fruits[j + 1];
+//             fruits[j + 1] = temp;
+//         }
+//     }
+// }
+// let chk = fruits.map(word => word.length);
+// console.log(fruits, chk);
+
+// 15> Sort the array of fruits in ascending order by the second character of each fruit name
+// let fruits = ["banana", "apple", "orange", "grape", "kiwi"];
+
+// fruits.sort((a, b) => a[1].localeCompare(b[1]));
+// console.log(fruits);
+
+// using for loop
+// for (let i = 0; i < fruits.length - 1; i++) {
+//     // console.log(fruits[i])
+//     for (let j = 0; j < fruits.length - 1 - i; j++) {
+//         // console.log("i :", fruits[i]);
+//         // console.log("j :", fruits[j]);
+//         // console.log("j+1 :", fruits[j + 1]);
+//         if (fruits[j][1] > fruits[j + 1][1]) {
+//             let temp = fruits[j];
+//             // console.log(temp);
+//             fruits[j] = fruits[j + 1];
+//             fruits[j + 1] = temp;
+//         }
+//     }
+// }
+// console.log(fruits);
+
+// 15> Merge two Sorted Arrays
 // let arr1 = [1, 3, 5];
 // let arr2 = [2, 4, 6];
 
@@ -190,7 +347,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // let merged = arr1.concat(arr2).sort((x,y)=> x-y)
 // console.log(merged)
 
-// 12> Find the longest string
+// 16> Find the longest string
 
 // let longest = "";
 // for (let str of a) {
@@ -203,7 +360,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // let longest = a.reduce((x, y) => (x.length >= y.length ? x : y), "");
 // console.log(longest);
 
-// 13> array contains a specific element
+// 17> array contains a specific element
 
 // let fruits = ["apple", "banana", "orange"];
 
@@ -218,7 +375,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 //   }
 // }
 
-//  14> capitalize the first letter of every string in an array
+//  18> capitalize the first letter of every string in an array
 
 // let fruits = ["apple", "banana", "orange"];
 
@@ -232,7 +389,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(fruits);
 
-// 15> capitalize the last letter of every string in an array
+// 19> capitalize the last letter of every string in an array
 
 // const fruits = ["apple", "banana", "orange"];
 
@@ -246,7 +403,7 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // }
 // console.log(fruits); // ["applE", "bananA", "orangE"]
 
-// 17> resvesre an array
+// 20> resvesre an array
 
 // let reversed = a.slice().reverse();
 // console.log(reversed)
@@ -262,14 +419,14 @@ let a = ['Apple', 'Banana', 'Cat', 'Dog', 'Apple', 'Dog']
 // let reversed = a.map(word => word.split('').reverse().join(''));
 // console.log(reversed)
 
-let reversed = [];
-for (let i = 0; i < a.length; i++) {
-  let word = a[i];
-  let revWord = '';
-  for (let j = word.length - 1; j >= 0; j--) {
-    revWord += word[j];
-  }
-  reversed.push(revWord);
-}
-console.log(reversed);
+// let reversed = [];
+// for (let i = 0; i < a.length; i++) {
+//   let word = a[i];
+//   let revWord = '';
+//   for (let j = word.length - 1; j >= 0; j--) {
+//     revWord += word[j];
+//   }
+//   reversed.push(revWord);
+// }
+// console.log(reversed);
 

@@ -241,4 +241,47 @@
 
 // console.log("Total character count:", totalChars);
 
-//  11> 
+//  11> sum of all values in object
+
+// let expenses = { rent: 6000, food: 3000, recharge: 300 };
+
+// let total = Object.values(expenses).reduce((sum, val) => sum + val, 0);
+// console.log(total);
+
+// let total = 0;
+// let vals = Object.values(expenses);
+// for (let i = 0; i < vals.length; i++) {
+//     total += vals[i];
+// }
+// console.log(total);
+
+// let total = 0;
+// for (let key in expenses) {
+//     total += expenses[key];
+// }
+// console.log(total);
+
+// let total = 0;
+// for (let val of Object.values(expenses)) {
+//     total += val;
+// }
+// console.log(total);
+
+// 12> Now the Explence total should be stored in new object
+let expenses = { rent: 6000, food: 3000, recharge: 300 };
+let expenseSummary = { totalExpense: 0 };
+
+// let keys = Object.keys(expenses);
+// for (let i = 0; i < keys.length; i++) {
+//     expenseSummary.totalExpense += expenses[keys[i]];
+// }
+// console.log(expenseSummary);
+
+// for (let key in expenses) {
+//     expenseSummary.totalExpense += expenses[key];
+// }
+// console.log(expenseSummary);
+
+let vals = Object.values(expenses);
+expenseSummary.totalExpense = vals.reduce((sum, val) => sum + val, 0);
+console.log(expenseSummary);
